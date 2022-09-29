@@ -25,7 +25,8 @@ The policy simply selects the candidate with the best estimate of the relative r
 
 
 
-# How to run the experiments
+## How to run the experiments
+
 First, install the packages in [requirements.txt](requirements.txt).
 Then, run one of these files to execute the experiments:
 - [simulation.py](simulation.py) for a synthetic simulation with diverse distibutions of rewards (weighted variants of [Irwin–Hall](https://en.wikipedia.org/wiki/Irwin–Hall_distribution)).
