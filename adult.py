@@ -2,6 +2,7 @@ import plot
 from data import *
 from plot import *
 from policies import *
+from pathlib import Path
 
 
 def main():
@@ -61,7 +62,7 @@ def run(
     plot_mult=0.8,
     exp_dir="exps/adult/simple/",
 ):
-    from pathlib import Path
+    assert T <= n_samples_per_group
 
     Path(f"{exp_dir}plots/").mkdir(parents=True, exist_ok=True)
 

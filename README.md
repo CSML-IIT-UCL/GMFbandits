@@ -33,6 +33,9 @@ First, install the packages in [requirements.txt](requirements.txt), `pip instal
 Adjust the parameters defined in the body of the function `main()` to change the number of rounds and other things. 
 See the content of the above files for more details.
 
+_Note that Due to inefficient preprocessing, US Census Experiments use a lot of ram to process the data, try to lower the `density` and the `n_samples_per_group`
+parameters if peprocessing crashes._
+
 ## Code structure
 
 Python files with the suffix `_multigroup` contain the implementation for the (more realistic) case where the sensitive group is 
