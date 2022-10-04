@@ -1,6 +1,6 @@
 # Code for Group Meritocratic Fairness in Linear Contextual Bandits
 
-This repo contains the code for the experiments in the paper [_Group Meritocratic Fairness in Linear Contextual Bandits_](https://arxiv.org/abs/2206.03150),
+Code for the experiments in the paper [_Group Meritocratic Fairness in Linear Contextual Bandits_](https://arxiv.org/abs/2206.03150),
 to appear at NeurIPS 2022.
 
 ## What is group meritocratic fairness?
