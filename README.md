@@ -20,7 +20,7 @@ the true reward and the feature vector encoding the properties of each candidate
 Furthermore, we show under some assumptions on the distribution of the candidates and
 on the noise in the rewards, that a greedy policy (_Fair-Greedy_ and _Fair-Greedy V2_ in the paper) can efficiently learn
 to be group meritocratic fair. Our Fair-Greedy policy combines ridge regression with 
-an empirical CDF to estimate the relative rank of each candidate. 
+the empirical CDF to estimate the relative rank of each candidate. 
 The policy simply selects the candidate with the best estimate of the relative rank: no confidence intervals are used.
 
 
