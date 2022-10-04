@@ -187,7 +187,7 @@ def preprocess_folktables(
 
         if process_x is not None:
             x = process_x(x)
-        if process_x is not None:
+        if process_y is not None:
             y = process_y(y)
 
         # add bias feature
