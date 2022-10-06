@@ -1,7 +1,6 @@
-# Code for Group Meritocratic Fairness in Linear Contextual Bandits
+# GMFbandits
 
-Code for the experiments in the paper [_Group Meritocratic Fairness in Linear Contextual Bandits_](https://arxiv.org/abs/2206.03150),
-to appear at NeurIPS 2022.
+Code for the experiments in the NeurIPS 2022 paper [_Group Meritocratic Fairness in Linear Contextual Bandits_](https://arxiv.org/abs/2206.03150).
 
 ## What is group meritocratic fairness?
 
@@ -28,12 +27,12 @@ The policy simply selects the candidate with the best estimate of the relative r
 First, install the packages in [requirements.txt](requirements.txt), `pip install -r requirements.txt`. Then, run one of these files to execute the experiments:
 - [simulation.py](simulation.py) for a synthetic simulation with diverse distributions of rewards (weighted variants of [Irwin–Hall](https://en.wikipedia.org/wiki/Irwin–Hall_distribution)).
 - [adult.py](adult.py) for an experiment using the US Census Data with a linear estimate of the income as the true reward.
-- [adult_multigroup.py](adult_multigroup.py) like the one above but the sensitive group is sampled randomly together with the context, which is a more realistic scenario.
+- [adult_multigroup.py](adult_multigroup.py) fot an experiment like the one above but with the sensitive group sampled randomly together with the context, which is a more realistic scenario.
 
-Adjust the parameters defined in the body of the function `main()` to change the number of rounds and other things. 
-See the content of the above files for more details.
+Adjust the parameters defined in the body or argmuments of the function `main()` to change the number of rounds and other things
+(see the content of the above files for more details).
 
-_Note that due to inefficient preprocessing, US Census Experiments use a lot of ram to process the data, try to lower the `density` and the `n_samples_per_group`
+_Note that due to poorly optimized preprocessing, US Census Experiments use a lot of ram to process the data, try to lower the `density` and the `n_samples_per_group`
 parameters if peprocessing crashes._
 
 ## Code structure
@@ -41,14 +40,14 @@ parameters if peprocessing crashes._
 Python files with the suffix `_multigroup` contain the implementation for the (more realistic) case where the sensitive group is 
 sampled together with contexts.
 
-Loading and preprocessing of the US Census data is done in [data.py](data.py) and [data_multigroup.py](data_multigroup.py) and relies on
-[folktables](https://github.com/zykls/folktables).
+Download, preprocessing and handling of the US Census data is done in [data.py](data.py) and [data_multigroup.py](data_multigroup.py) and relies on
+[folktables](https://github.com/zykls/folktables). The data is not present in this repository but it is automatically downloaded in a `data` folder at runtime.
 
 [policies.py](policies.py) and [policies_multigroup.py](policies_multigroup.py) Contain the implementation of Fair-Greedy
 and Fair-Greedy V2 in the class `FairGreedy`, and of other baselines policies like Uniform Random, OFUL and Greedy.
 It also contains the class representing a bandit problem and the method used to test a given policy on such problems.
 
-Plotting functionality used to generate figures is in [plot.py](plot.py)
+Plotting functionality used to generate figures is in [plot.py](plot.py).
 
 ## Cite us
 
